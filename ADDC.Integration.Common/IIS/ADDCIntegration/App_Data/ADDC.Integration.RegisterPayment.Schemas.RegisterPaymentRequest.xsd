@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://ADDC.Integration.RegisterPayment.Schemas.RegisterPaymentRequest" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" xmlns:ns0="http://ADDC.Integration.RegisterPayment.Schemas.BillInfoCollection" targetNamespace="http://ADDC.Integration.RegisterPayment.Schemas.RegisterPaymentRequest" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="ADDC.Integration.RegisterPayment.Schemas.BillInfoCollection, ADDC.Integration.RegisterPayment.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=67f686d513795f8d" namespace="http://ADDC.Integration.RegisterPayment.Schemas.BillInfoCollection" />
+  <xs:annotation>
+    <xs:appinfo>
+      <b:references xmlns:b="http://schemas.microsoft.com/BizTalk/2003">
+        <b:reference targetNamespace="http://ADDC.Integration.RegisterPayment.Schemas.BillInfo" />
+        <b:reference targetNamespace="http://ADDC.Integration.RegisterPayment.Schemas.BillInfoCollection" />
+        <b:reference targetNamespace="http://ADDC.Integration.RegisterPayment.Schemas.PageSettings" />
+      </b:references>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="RegisterPaymentRequest">
+    <xs:annotation>
+      <xs:appinfo />
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="PersonID" type="xs:string" />
+        <xs:element name="TotalAmount" type="xs:decimal" />
+        <xs:element name="ReturnPath" type="xs:string" />
+        <xs:element name="SaveCard" type="xs:boolean" />
+        <xs:element name="CardNickName" type="xs:string" />
+        <xs:element name="PaymentMethod">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="ExistingCard" />
+              <xs:enumeration value="NewCard" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element xmlns:q1="http://ADDC.Integration.RegisterPayment.Schemas.BillInfoCollection" ref="q1:BillInfoCollection" />
+        <xs:element minOccurs="0" name="Channel" type="xs:string" />
+        <xs:element minOccurs="0" name="TransType" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

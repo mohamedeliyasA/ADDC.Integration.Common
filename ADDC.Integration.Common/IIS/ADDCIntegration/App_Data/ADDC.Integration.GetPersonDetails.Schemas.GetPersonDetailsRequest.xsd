@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://ADDC.Integration.GetPersonDetails.Schemas.GetPersonDetailsRequest" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" targetNamespace="http://ADDC.Integration.GetPersonDetails.Schemas.GetPersonDetailsRequest" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="GetPersonDetailsRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="InputIdValue" type="xs:string" />
+        <xs:element name="IDtype" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

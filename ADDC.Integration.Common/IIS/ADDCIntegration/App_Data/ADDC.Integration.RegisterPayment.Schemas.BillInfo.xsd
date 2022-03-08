@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://ADDC.Integration.RegisterPayment.Schemas.BillInfo" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" targetNamespace="http://ADDC.Integration.RegisterPayment.Schemas.BillInfo" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="BillInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="PropertyName" type="xs:string" />
+        <xs:element name="AccountNumber" type="xs:string" />
+        <xs:element name="BillNumber" type="xs:string" />
+        <xs:element name="BillDate" type="xs:date" />
+        <xs:element name="PayByDate" type="xs:date" />
+        <xs:element name="Amount" type="xs:decimal" />
+        <xs:element name="FriendPayment" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

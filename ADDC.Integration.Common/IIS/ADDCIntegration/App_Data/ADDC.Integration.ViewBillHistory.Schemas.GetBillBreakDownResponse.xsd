@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://ADDC.Integration.ViewBillHistory.Schemas.GetBillBreakDownResponse" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" targetNamespace="http://ADDC.Integration.ViewBillHistory.Schemas.GetBillBreakDownResponse" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="GetBillBreakDownResponse">
+    <xs:annotation>
+      <xs:appinfo />
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="Account">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AccountClass" type="xs:string" />
+              <xs:element name="PremiseType_CD" type="xs:string" />
+              <xs:element name="StartupOption_CD" type="xs:string" />
+              <xs:element minOccurs="0" name="TariffType">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Electricity" type="xs:string" />
+                    <xs:element name="Water" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="HasActiveElectricitySA" type="xs:string" />
+              <xs:element name="HasActiveWaterSA" type="xs:string" />
+              <xs:element name="HasActiveSocialCard" type="xs:string" />
+              <xs:element name="SocialCardStartDate" type="xs:string" />
+              <xs:element name="BillNotGenerated" type="xs:string" />
+              <xs:element name="OutstandingAmount" type="xs:string" />
+              <xs:element name="BillID" type="xs:string" />
+              <xs:element name="IsLatestBill" type="xs:string" />
+              <xs:element name="BillCreationDate" type="xs:string" />
+              <xs:element name="BillDueOnDate" type="xs:string" />
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="AtAGlance">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Electricity" type="xs:string" />
+                    <xs:element name="Water" type="xs:string" />
+                    <xs:element name="Municipal" type="xs:string" />
+                    <xs:element name="OtherCharges" type="xs:string" />
+                    <xs:element name="PreviousCharges" type="xs:string" />
+                    <xs:element name="VatCharges" type="xs:string" />
+                    <xs:element name="TotalToPay" type="xs:string" />
+                    <xs:element name="Adjustments" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="Electricity">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ReadingStartDate" type="xs:string" />
+                    <xs:element name="ReadingEndDate" type="xs:string" />
+                    <xs:element name="GreenConsumption" type="xs:string" />
+                    <xs:element name="GreenChargesWithoutVAT" type="xs:string" />
+                    <xs:element name="RedConsumption" type="xs:string" />
+                    <xs:element name="RedChargesWithoutVAT" type="xs:string" />
+                    <xs:element name="TotalConsumption" type="xs:string" />
+                    <xs:element name="TotalChargesWithoutVAT" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="Water">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ReadingStartDate" type="xs:string" />
+                    <xs:element name="ReadingEndDate" type="xs:string" />
+                    <xs:element name="GreenConsumption" type="xs:string" />
+                    <xs:element name="GreenChargesWithoutVAT" type="xs:string" />
+                    <xs:element name="RedConsumption" type="xs:string" />
+                    <xs:element name="RedChargesWithoutVAT" type="xs:string" />
+                    <xs:element name="TotalConsumption" type="xs:string" />
+                    <xs:element name="TotalChargesWithoutVAT" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="errorCode" type="xs:string" />
+        <xs:element minOccurs="0" name="errorMessage" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

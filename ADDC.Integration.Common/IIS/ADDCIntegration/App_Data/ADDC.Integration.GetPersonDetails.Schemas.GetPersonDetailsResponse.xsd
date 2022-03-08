@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://ADDC.Integration.GetPersonDetails.Schemas.GetPersonDetailsResponse" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" targetNamespace="http://ADDC.Integration.GetPersonDetails.Schemas.GetPersonDetailsResponse" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="GetPersonDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="IdValue" type="xs:string" />
+        <xs:element name="CustomerType" type="xs:string" />
+        <xs:element name="UserStatus" type="xs:string" />
+        <xs:element name="PersonID" type="xs:string" />
+        <xs:element name="Email" type="xs:string" />
+        <xs:element name="Mobile" type="xs:string" />
+        <xs:element name="PinActive" type="xs:string" />
+        <xs:element name="Status" type="xs:string" />
+        <xs:element name="ErrorMessage" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

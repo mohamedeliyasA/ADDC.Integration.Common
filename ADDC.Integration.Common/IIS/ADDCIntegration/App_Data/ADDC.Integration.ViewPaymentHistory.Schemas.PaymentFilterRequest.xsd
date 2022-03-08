@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://ADDC.Integration.ViewPaymentHistory.Schemas.PaymentFilterRequest" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" xmlns:ns0="http://ADDC.Integration.ViewPaymentHistory.Schemas.PageSettings" targetNamespace="http://ADDC.Integration.ViewPaymentHistory.Schemas.PaymentFilterRequest" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="ADDC.Integration.ViewPaymentHistory.Schemas.PageSettings, ADDC.Integration.ViewPaymentHistory.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=67f686d513795f8d" namespace="http://ADDC.Integration.ViewPaymentHistory.Schemas.PageSettings" />
+  <xs:annotation>
+    <xs:appinfo>
+      <b:references xmlns:b="http://schemas.microsoft.com/BizTalk/2003">
+        <b:reference targetNamespace="http://ADDC.Integration.ViewPaymentHistory.Schemas.PageSettings" />
+      </b:references>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PaymentFilterRequest">
+    <xs:annotation>
+      <xs:appinfo />
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="AccountRequest">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AccountID" type="xs:string" />
+              <xs:element name="PersonID" type="xs:string" />
+              <xs:element name="NumberOfRecords" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element xmlns:q1="http://ADDC.Integration.ViewPaymentHistory.Schemas.PageSettings" ref="q1:PageSettings" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

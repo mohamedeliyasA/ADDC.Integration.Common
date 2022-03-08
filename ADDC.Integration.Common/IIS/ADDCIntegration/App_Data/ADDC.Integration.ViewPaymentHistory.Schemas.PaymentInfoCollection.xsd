@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:ns2="http://ADDC.Integration.ViewPaymentHistory.Schemas.StatusResponse" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" xmlns:ns0="http://ADDC.Integration.ViewPaymentHistory.Schemas.PageSettings" xmlns="http://ADDC.Integration.ViewPaymentHistory.Schemas.PaymentInfoCollection" xmlns:ns1="http://ADDC.Integration.ViewPaymentHistory.Schemas.PaymentInfo" targetNamespace="http://ADDC.Integration.ViewPaymentHistory.Schemas.PaymentInfoCollection" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="ADDC.Integration.ViewPaymentHistory.Schemas.StatusResponse, ADDC.Integration.ViewPaymentHistory.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=67f686d513795f8d" namespace="http://ADDC.Integration.ViewPaymentHistory.Schemas.StatusResponse" />
+  <xs:import schemaLocation="ADDC.Integration.ViewPaymentHistory.Schemas.PaymentInfo, ADDC.Integration.ViewPaymentHistory.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=67f686d513795f8d" namespace="http://ADDC.Integration.ViewPaymentHistory.Schemas.PaymentInfo" />
+  <xs:import schemaLocation="ADDC.Integration.ViewPaymentHistory.Schemas.PageSettings, ADDC.Integration.ViewPaymentHistory.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=67f686d513795f8d" namespace="http://ADDC.Integration.ViewPaymentHistory.Schemas.PageSettings" />
+  <xs:annotation>
+    <xs:appinfo>
+      <b:references xmlns:b="http://schemas.microsoft.com/BizTalk/2003">
+        <b:reference targetNamespace="http://ADDC.Integration.ViewPaymentHistory.Schemas.PageSettings" />
+        <b:reference targetNamespace="http://ADDC.Integration.ViewPaymentHistory.Schemas.PaymentInfo" />
+        <b:reference targetNamespace="http://ADDC.Integration.ViewPaymentHistory.Schemas.StatusResponse" />
+      </b:references>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PaymentInfoCollection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://ADDC.Integration.ViewPaymentHistory.Schemas.PaymentInfo" minOccurs="0" maxOccurs="unbounded" ref="q1:PaymentInfo" />
+        <xs:element xmlns:q1="http://ADDC.Integration.ViewPaymentHistory.Schemas.StatusResponse" minOccurs="0" ref="q1:StatusResponse" />
+        <xs:element xmlns:q2="http://ADDC.Integration.ViewPaymentHistory.Schemas.PageSettings" ref="q2:PageSettings" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

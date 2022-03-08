@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://ADDC.Integration.FinalizePayment.Schemas.StatusResponse" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" targetNamespace="http://ADDC.Integration.FinalizePayment.Schemas.StatusResponse" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="StatusResponse">
+    <xs:annotation>
+      <xs:appinfo />
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence minOccurs="0">
+        <xs:element name="Status" type="xs:boolean" />
+        <xs:element name="Code" type="xs:string" />
+        <xs:element name="Description" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

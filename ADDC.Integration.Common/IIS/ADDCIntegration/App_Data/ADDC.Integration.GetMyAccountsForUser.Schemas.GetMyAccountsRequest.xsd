@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://ADDC.Integration.GetMyAccountsForUser.Schemas.GetMyAccountsRequest" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" targetNamespace="http://ADDC.Integration.GetMyAccountsForUser.Schemas.GetMyAccountsRequest" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="GetMyAccountsRequest">
+    <xs:annotation>
+      <xs:appinfo />
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="PersonID" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="AccountID" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

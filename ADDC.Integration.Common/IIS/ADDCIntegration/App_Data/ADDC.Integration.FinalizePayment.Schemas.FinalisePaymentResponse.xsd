@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://ADDC.Integration.FinalizePayment.Schemas.FinalisePaymentResponse" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" xmlns:ns0="http://ADDC.Integration.FinalizePayment.Schemas.StatusResponse" targetNamespace="http://ADDC.Integration.FinalizePayment.Schemas.FinalisePaymentResponse" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="ADDC.Integration.FinalizePayment.Schemas.StatusResponse, ADDC.Integration.FinalizePayment.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=67f686d513795f8d" namespace="http://ADDC.Integration.FinalizePayment.Schemas.StatusResponse" />
+  <xs:annotation>
+    <xs:appinfo>
+      <b:references xmlns:b="http://schemas.microsoft.com/BizTalk/2003">
+        <b:reference targetNamespace="http://ADDC.Integration.FinalizePayment.Schemas.StatusResponse" />
+      </b:references>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="FinalisePaymentResponse">
+    <xs:annotation>
+      <xs:appinfo />
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TransactionID" type="xs:string" />
+        <xs:element xmlns:q1="http://ADDC.Integration.FinalizePayment.Schemas.StatusResponse" ref="q1:StatusResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

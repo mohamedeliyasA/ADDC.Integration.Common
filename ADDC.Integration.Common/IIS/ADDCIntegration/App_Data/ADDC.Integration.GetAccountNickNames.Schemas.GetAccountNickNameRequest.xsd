@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://ADDC.Integration.GetAccountNickNames.Schemas.GetAccountNickNameRequest" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" targetNamespace="http://ADDC.Integration.GetAccountNickNames.Schemas.GetAccountNickNameRequest" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="GetAccountNickNameRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="PersonID" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

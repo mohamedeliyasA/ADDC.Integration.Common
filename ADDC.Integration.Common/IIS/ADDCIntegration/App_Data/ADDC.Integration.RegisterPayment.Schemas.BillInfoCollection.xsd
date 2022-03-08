@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://ADDC.Integration.RegisterPayment.Schemas.BillInfoCollection" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" xmlns:ns1="http://ADDC.Integration.RegisterPayment.Schemas.PageSettings" xmlns:ns0="http://ADDC.Integration.RegisterPayment.Schemas.BillInfo" targetNamespace="http://ADDC.Integration.RegisterPayment.Schemas.BillInfoCollection" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="ADDC.Integration.RegisterPayment.Schemas.PageSettings, ADDC.Integration.RegisterPayment.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=67f686d513795f8d" namespace="http://ADDC.Integration.RegisterPayment.Schemas.PageSettings" />
+  <xs:import schemaLocation="ADDC.Integration.RegisterPayment.Schemas.BillInfo, ADDC.Integration.RegisterPayment.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=67f686d513795f8d" namespace="http://ADDC.Integration.RegisterPayment.Schemas.BillInfo" />
+  <xs:annotation>
+    <xs:appinfo>
+      <b:references xmlns:b="http://schemas.microsoft.com/BizTalk/2003">
+        <b:reference targetNamespace="http://ADDC.Integration.RegisterPayment.Schemas.PageSettings" />
+        <b:reference targetNamespace="http://ADDC.Integration.RegisterPayment.Schemas.BillInfo" />
+      </b:references>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="BillInfoCollection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://ADDC.Integration.RegisterPayment.Schemas.BillInfo" minOccurs="0" maxOccurs="unbounded" ref="q1:BillInfo" />
+        <xs:element xmlns:q2="http://ADDC.Integration.RegisterPayment.Schemas.PageSettings" ref="q2:PageSettings" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

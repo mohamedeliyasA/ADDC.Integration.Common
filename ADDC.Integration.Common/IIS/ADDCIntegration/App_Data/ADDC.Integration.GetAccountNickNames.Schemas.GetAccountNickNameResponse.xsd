@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://ADDC.Integration.GetAccountNickNames.Schemas.GetAccountNickNameResponse" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" targetNamespace="http://ADDC.Integration.GetAccountNickNames.Schemas.GetAccountNickNameResponse" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="GetAccountNickNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="AccountNickNames">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="AccountNickName">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="NickName" type="xs:string" />
+                    <xs:element name="AccountID" type="xs:string" />
+                  </xs:sequence>
+                  <xs:attribute name="tmp" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Status" type="xs:string" />
+        <xs:element name="ErrorMessage" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://ADDC.Integration.FinalizePayment.Schemas.FinalisePaymentRequest" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" targetNamespace="http://ADDC.Integration.FinalizePayment.Schemas.FinalisePaymentRequest" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="FinalisePaymentRequest">
+    <xs:annotation>
+      <xs:appinfo />
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TransactionID" type="xs:string" />
+        <xs:element name="SaveCard" type="xs:boolean" />
+        <xs:element name="OrderID" type="xs:string" />
+        <xs:element minOccurs="0" name="Channel" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

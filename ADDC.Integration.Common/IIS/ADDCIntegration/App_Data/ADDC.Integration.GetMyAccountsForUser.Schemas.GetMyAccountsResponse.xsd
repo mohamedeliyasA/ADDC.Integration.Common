@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://ADDC.Integration.GetMyAccountsForUser.Schemas.GetMyAccountsResponse" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" xmlns:ns0="http://ADDC.Integration.GetMyAccountsForUser.Schemas.StatusResponse" targetNamespace="http://ADDC.Integration.GetMyAccountsForUser.Schemas.GetMyAccountsResponse" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="ADDC.Integration.GetMyAccountsForUser.Schemas.StatusResponse, ADDC.Integration.GetMyAccountsForUser.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=114c5a77c46637ea" namespace="http://ADDC.Integration.GetMyAccountsForUser.Schemas.StatusResponse" />
+  <xs:annotation>
+    <xs:appinfo>
+      <b:references xmlns:b="http://schemas.microsoft.com/BizTalk/2003">
+        <b:reference targetNamespace="http://ADDC.Integration.GetMyAccountsForUser.Schemas.StatusResponse" />
+      </b:references>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="GetMyAccountsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="MyAccounts">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AccountID" type="xs:string" />
+              <xs:element name="NickName" type="xs:string" />
+              <xs:element name="PersonID" type="xs:string" />
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="PremiseDetails">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="PremiseID" type="xs:string" />
+                    <xs:element name="PremiseAddress" type="xs:string" />
+                    <xs:element name="PremiseTypeA" type="xs:string" />
+                    <xs:element name="PremiseTypeCD" type="xs:string" />
+                    <xs:element name="PremiseTypeE" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="AutoPayStatus" type="xs:string" />
+              <xs:element name="AutoPaySetByPersonID" type="xs:string" />
+              <xs:element name="AutoPayDate" type="xs:string" />
+              <xs:element name="DayOfMonth" type="xs:string" />
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="CardDetails">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Brand" type="xs:string" />
+                    <xs:element name="ExpiringInMonths" type="xs:string" />
+                    <xs:element name="ExpiryDate" type="xs:string" />
+                    <xs:element name="Name" type="xs:string" />
+                    <xs:element name="Number" type="xs:string" />
+                    <xs:element name="ShowExpiryAlert" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="BillCycleDate" type="xs:string" />
+              <xs:element name="AutoPayDateSuggestion" type="xs:string" />
+              <xs:element name="AutoPayAmount" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element xmlns:q1="http://ADDC.Integration.GetMyAccountsForUser.Schemas.StatusResponse" ref="q1:StatusResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

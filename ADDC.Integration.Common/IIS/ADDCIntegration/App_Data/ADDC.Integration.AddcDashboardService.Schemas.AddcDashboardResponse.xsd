@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://ADDC.Integration.AddcDashboardService.Schemas.AddcDashboardResponse" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" targetNamespace="http://ADDC.Integration.AddcDashboardService.Schemas.AddcDashboardResponse" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="AddcDashboardResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="AccountDetails">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="AccountID" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="NickName" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PersonID" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PremiseID" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PremisePoBox" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PremiseAddress" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PremiseType" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="OutstandingBalance" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PayByDate" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="LatestBillDate" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="LatestBillID" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="Active" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="LatestBillAmount" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="AccountType" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="MoveOutStatus" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="BillRoute" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="TariffType" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="BillCycle" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

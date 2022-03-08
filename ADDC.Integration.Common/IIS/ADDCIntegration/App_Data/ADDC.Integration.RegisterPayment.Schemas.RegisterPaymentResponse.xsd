@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://ADDC.Integration.RegisterPayment.Schemas.RegisterPaymentResponse" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" xmlns:ns0="http://ADDC.Integration.RegisterPayment.Schemas.StatusResponse" targetNamespace="http://ADDC.Integration.RegisterPayment.Schemas.RegisterPaymentResponse" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="ADDC.Integration.RegisterPayment.Schemas.StatusResponse, ADDC.Integration.RegisterPayment.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=67f686d513795f8d" namespace="http://ADDC.Integration.RegisterPayment.Schemas.StatusResponse" />
+  <xs:annotation>
+    <xs:appinfo>
+      <b:references xmlns:b="http://schemas.microsoft.com/BizTalk/2003">
+        <b:reference targetNamespace="http://ADDC.Integration.RegisterPayment.Schemas.StatusResponse" />
+      </b:references>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="RegisterPaymentResponse">
+    <xs:annotation>
+      <xs:appinfo />
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ReturnPath" type="xs:string" />
+        <xs:element name="TransactionID" type="xs:string" />
+        <xs:element name="OrderID" type="xs:string" />
+        <xs:element xmlns:q1="http://ADDC.Integration.RegisterPayment.Schemas.StatusResponse" ref="q1:StatusResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
